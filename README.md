@@ -51,6 +51,13 @@ git commit
 ```
 git commit --amend : commit 내용 수정
 ```
+## Git push 후 commit 내용 변경, author 수정 등
+```
+git rebase -i HEAD~1 : 몇번째 Commit 으로 갈지
+git commit --amend --author= <username> <<useremail>>
+git rebase --continue
+push
+```
 
 ## Git fetch 
 - 원격 저장소의 데이터를 로컬에 가져옴.
@@ -67,6 +74,8 @@ git commit --amend : commit 내용 수정
 git config --global -> 이 버전을 작업한 사람이 누구이고, 
 git config --global user.name "seonmin_git"
 git config --global user.email "email"
+git config --local user.name <username>
+git config --local user.email <useremail>
 git config --list : git config 
 ```
 
